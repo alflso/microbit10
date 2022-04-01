@@ -1,14 +1,10 @@
 let 온도 = 0
 let 온도세기값 = 0
 function 뜨거움 () {
-    basic.showLeds(`
-        . . # . .
-        # # # # #
-        . . # . .
-        . . # . .
-        . . # . .
-        `)
-    basic.pause(200)
+    basic.showIcon(IconNames.No)
+    basic.pause(100)
+    basic.showIcon(IconNames.Sword)
+    basic.pause(100)
     basic.clearScreen()
 }
 function 온도보기 () {
@@ -32,10 +28,14 @@ function 미지근함 () {
     basic.clearScreen()
 }
 function 차가움 () {
-    basic.showIcon(IconNames.No)
-    basic.pause(100)
-    basic.showIcon(IconNames.Sword)
-    basic.pause(100)
+    basic.showLeds(`
+        . . # . .
+        # # # # #
+        . . # . .
+        . . # . .
+        . . # . .
+        `)
+    basic.pause(200)
     basic.clearScreen()
 }
 function 따뜻함 () {
